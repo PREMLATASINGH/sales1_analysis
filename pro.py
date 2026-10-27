@@ -37,3 +37,14 @@ plt.title('Total Sales by Region')
 plt.ylabel('Sales Amount')
 plt.xlabel('Region')
 plt.show()
+df['month'] = df['order_date'].dt.month
+
+monthly_sales = df.groupby('month')['total_sales'].sum()
+
+plt.figure(figsize=(10,5))
+monthly_sales.plot(kind='line', marker='o', color='green')
+plt.title('Monthly Sales Trend')
+plt.xlabel('Month')
+plt.ylabel('Total Sales')
+plt.grid(True)
+plt.show()
