@@ -23,3 +23,4 @@ df = pd.DataFrame(data)
 df['total_sales'] = df['quantity'] * df['unit_price'] * (1 - df['discount']/100)
 
 df.head()
+print(df.head())
