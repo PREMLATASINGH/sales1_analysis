@@ -63,3 +63,10 @@ category_sales.plot(kind='pie', autopct='%1.1f%%', colors=['lightblue','lightgre
 plt.title('Sales by Category')
 plt.ylabel('')
 plt.show()
+
+plt.figure(figsize=(8,5))
+plt.scatter(df['discount'], df['total_sales'], alpha=0.5, color='purple')
+plt.title('Discount vs Total Sales')
+plt.xlabel('Discount (%)')
+plt.ylabel('Total Sales')
+plt.show()
