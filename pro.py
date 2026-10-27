@@ -55,3 +55,11 @@ product_sales.plot(kind='bar', color='orange')
 plt.title('Top 5 Products by Sales')
 plt.ylabel('Sales Amount')
 plt.show()
+
+category_sales = df.groupby('category')['total_sales'].sum()
+
+plt.figure(figsize=(6,4))
+category_sales.plot(kind='pie', autopct='%1.1f%%', colors=['lightblue','lightgreen'])
+plt.title('Sales by Category')
+plt.ylabel('')
+plt.show()
